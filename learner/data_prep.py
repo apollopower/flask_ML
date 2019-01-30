@@ -3,6 +3,8 @@ import pandas as pd
 from sklearn.linear_model import LinearRegression
 from sklearn import metrics
 
+import pdb
+
 def create_supervised_dataset(data_path, features, target, csv=True):
     if not csv:
         return "Error, data not CSV" # Hack solution for now
@@ -21,4 +23,6 @@ def linear_regression(data_map):
    print("Trained!")
    print("-" * 80)
    print("Mean Absolute Error {}".format(metrics.mean_absolute_error(data_map['y_train'], y_predict)))
+   # pdb.set_trace()
+   return y_predict
 

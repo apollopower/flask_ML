@@ -1,5 +1,6 @@
 from app import app
 from learner.data_prep import *
+import json
 @app.route('/')
 def index():
     return "Hello there young Snorlax"
@@ -10,4 +11,5 @@ def train():
     features = ['GRE Score', 'TOEFL Score', 'University Rating', 'SOP', 'LOR ', 'CGPA', 'Research']
     target = 'Chance of Admit '
     data_map = create_supervised_dataset(data_path, features, target)
-    linear_regression(data_map)
+    y_predict = linear_regression(data_map)
+    return json.dump(y_predict)

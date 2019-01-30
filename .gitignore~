@@ -1,0 +1,13 @@
+data
+.flaskenv
+,flaskenv~
+.gitignore
+.ml_app.py.un~
+__pycache__/
+
+..flaskenv.un~
+..gitignore.un~
+.DS_Store
+.gitignore.swp
+.gitignore~:w
+

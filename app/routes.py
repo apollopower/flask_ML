@@ -33,3 +33,7 @@ def predict():
     predict = linear_model.predict(sample_input)
     print(predict)
     return 'Worked!!!'
+
+@app.route('/hello')
+def hello():
+    return "Hello there"
